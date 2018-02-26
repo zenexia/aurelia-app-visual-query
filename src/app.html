@@ -1,0 +1,74 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="font-awesome/css/font-awesome.min.css"></require>
+  <require from="./assets/css/base.css"></require>
+
+  <div class="sticky-top d-flex flex-column flex-md-row align-items-center border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal">
+      <a href="/">
+        <img src="./src/assets/img/logo.png" width="25px">
+        V-Query
+      </a>
+    </h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark" href="search">
+        <i class="fa fa-search"></i>
+        Search
+      </a>
+      <a class="p-2 text-dark" href="projects">
+        <i class="fa fa-puzzle-piece"></i>
+        Projects
+      </a>
+      <a class="p-2 text-dark" href="segments">
+        <i class="fa fa-gears"></i>
+        Segments
+      </a>
+    </nav>
+    <a class="btn btn-outline-primary" href="logout">Log Out</a>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="projects">
+                <span data-feather="home"></span>
+                <i class="fa fa-project"></i>
+                Projects
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                Tables
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="shopping-cart"></span>
+                Columns
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Regular link</a>
+          <a class="dropdown-item active" href="#">Active link</a>
+          <a class="dropdown-item" href="#">Another link</a>
+        </div>
+      </nav>
+
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+        <router-view class="col-md-12"></router-view>
+      </main>
+
+
+    </div>
+  </div>
+
+
+</template>
