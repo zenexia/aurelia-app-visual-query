@@ -30,40 +30,11 @@
   <div class="container-fluid">
     <div class="row">
       <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-        <div class="sidebar-sticky">
-
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="projects">
-                <span data-feather="home"></span>
-                <i class="fa fa-project"></i>
-                Projects
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file"></span>
-                Tables
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="shopping-cart"></span>
-                Columns
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Regular link</a>
-          <a class="dropdown-item active" href="#">Active link</a>
-          <a class="dropdown-item" href="#">Another link</a>
-        </div>
+       <router-view name="sidebar"></router-view>
       </nav>
 
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-        <router-view class="col-md-12"></router-view>
+        <router-view name="main"></router-view>
       </main>
 
 

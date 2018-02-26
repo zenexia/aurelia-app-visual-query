@@ -9,8 +9,16 @@ export class App {
         config.map([
             {
                 route: ["", "/"],
-                moduleId: './modules/dashboard/home',
-                title: 'V-Query Dashboard'
+
+                title: 'V-Query Dashboard',
+                viewPorts: {
+                    main: {
+                        moduleId: './modules/dashboard/home'
+                    },
+                    sidebar: {
+                        moduleId: './modules/dashboard/side-bar'
+                    }
+                }
             },
             {
                 route: '/search',
