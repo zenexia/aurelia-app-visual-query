@@ -9,38 +9,30 @@ export class App {
         config.map([
             {
                 route: ["", "/"],
-
                 title: 'V-Query Dashboard',
-                viewPorts: {
-                    main: {
-                        moduleId: './modules/dashboard/home'
-                    },
-                    sidebar: {
-                        moduleId: './modules/dashboard/side-bar'
-                    }
-                }
+                moduleId: './modules/dashboard/home',
+                nav: true
             },
             {
                 route: '/search',
+                title: 'Search Form',
                 moduleId: './modules/search/search-form',
-                title: 'Search Form'
+                nav: true
             },
             {
-                route: '/projects',
-                moduleId: './modules/projects/projects-list',
-                title: 'Projects List'
-            },
-            {
-                route: 'projects/:id',
-                moduleId: './modules/projects/project-detail',
-                title: 'Project Detail',
-                name:'projects'
+                route: "projects",
+                title: 'Project Section',
+                name:'project-section',
+                moduleId: './modules/projects/project-section',
+                nav: true
             },
             {
                 route: '/segments',
+                title: 'Segment Index',
                 moduleId: './modules/segments/segment-index',
-                title: 'Segment Index'
-            }
+                nav: true
+            },
+            { route: 'users/:id/detail', name: 'userDetail', moduleId: 'users/user-detail' }
         ]);
 
         this.router = router;

@@ -1,6 +1,6 @@
 export class SideBar {
     constructor()
     {
-        this.pageTitle = `Home`;
+        this.pageTitle = `Side-Bar`;
     }
 }

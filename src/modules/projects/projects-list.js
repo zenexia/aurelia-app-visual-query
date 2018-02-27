@@ -1,7 +1,7 @@
-export class ProjectList {
+export class ProjectsList {
 
     constructor()
     {
-        this.PageTitle = `Parojects List`;
+        this.pageTitle = `Projects List`;
     }
 }
