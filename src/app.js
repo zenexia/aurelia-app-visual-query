@@ -16,20 +16,41 @@ export class App {
             {
                 route: 'search',
                 title: 'Search Form',
-                moduleId: './modules/search/search-form',
+                viewPorts: {
+                    sideBar: {
+                        moduleId: './modules/search/search-form'
+                    },
+                    mainContent: {
+                        moduleId: './modules/search/search-form'
+                    }
+                },
                 nav: true
             },
             {
                 route: "projects",
                 title: 'Project Section',
                 name:'project-section',
-                moduleId: './modules/projects/project-section',
+                viewPorts: {
+                    sideBar: {
+                        moduleId: './modules/search/search-form'
+                    },
+                    mainContent: {
+                        moduleId: './modules/projects/project-section'
+                    }
+                },
                 nav: true
             },
             {
                 route: 'segments',
                 title: 'Segment Index',
-                moduleId: './modules/segments/segment-index',
+                viewPorts: {
+                    sideBar: {
+                        moduleId: './modules/search/search-form'
+                    },
+                    mainContent: {
+                        moduleId: './modules/segments/segment-index'
+                    }
+                },
                 nav: true
             },
             { route: 'users/:id/detail', name: 'userDetail', moduleId: 'users/user-detail' }
