@@ -14,7 +14,7 @@ export class App {
                 nav: true
             },
             {
-                route: '/search',
+                route: 'search',
                 title: 'Search Form',
                 moduleId: './modules/search/search-form',
                 nav: true
@@ -27,7 +27,7 @@ export class App {
                 nav: true
             },
             {
-                route: '/segments',
+                route: 'segments',
                 title: 'Segment Index',
                 moduleId: './modules/segments/segment-index',
                 nav: true
