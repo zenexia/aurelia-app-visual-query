@@ -12,6 +12,7 @@
         "loose": true
       }
     ],
+    ["es2017"],
     "stage-1",
     ["env", {
       "targets": {

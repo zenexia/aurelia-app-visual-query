@@ -5,21 +5,25 @@ import {HttpClient} from "aurelia-fetch-client";
 export class ProjectRepository {
 
     constructor(http) {
+        /*
+        http.configure(config => {
+            config.useStandardConfiguration()
+                .withBaseUrl("http://bq.vm/")
+                .withDefaults({
+                    credentials: 'same-origin',
+                    headers: {
+                        'X-Requested-With': 'Fetch'
+                    }
+                });
+            }
+
+        );*/
         this.http = http;
-        this.url = "http://bq.vm/projects";
     }
     async getAll() {
-        fetch(this.url, {
-            credentials: 'same-origin',
-            method: 'get'
-        }).then(function(response) {
-            return response.text();
-        }).then(function(text) {
-            return text;
-            //document.getElementById("projects-list").innerHTML = text;
-        }).catch(function(err) {
-            console.log(err);
-            return null;
-        });
+
+            let response = await this.http.fetch(`projects`);
+            let data = await response.json();
+            return data;
     }
 }
