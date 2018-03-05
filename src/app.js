@@ -10,7 +10,14 @@ export class App {
             {
                 route: ["", "/"],
                 title: 'V-Query Dashboard',
-                moduleId: './modules/dashboard/home',
+                viewPorts: {
+                    sideBar: {
+                        moduleId: './modules/dashboard/side-bar'
+                    },
+                    mainContent: {
+                        moduleId: './modules/dashboard/home'
+                    }
+                },
                 nav: true
             },
             {
