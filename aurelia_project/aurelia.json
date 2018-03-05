@@ -49,6 +49,12 @@
           "aurelia-bootstrapper",
           "aurelia-dependency-injection",
           "aurelia-event-aggregator",
+          {
+            "name": "aurelia-fetch-client",
+            "main": "aurelia-fetch-client",
+            "path": "../node_modules/aurelia-fetch-client/dist/amd",
+            "resources": []
+          },
           "aurelia-framework",
           "aurelia-history",
           "aurelia-history-browser",
@@ -93,7 +99,9 @@
             "name": "bootstrap",
             "path": "../node_modules/bootstrap/dist",
             "main": "js/bootstrap.min",
-            "deps": ["jquery"],
+            "deps": [
+              "jquery"
+            ],
             "exports": "$",
             "resources": [
               "css/bootstrap.css"
@@ -138,7 +146,8 @@
     "fileExtension": ".js",
     "options": {
       "plugins": [
-        "transform-es2015-modules-amd"
+        "transform-es2015-modules-amd",
+        "babel-plugin-transform-decorators-legacy"
       ]
     },
     "source": "src/**/*.js"

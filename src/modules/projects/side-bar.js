@@ -1,6 +1,21 @@
+import {ProjectRepository} from "../../nucleus/projects/project-repository";
+
 export class SideBar {
-    constructor()
+    static inject = [ProjectRepository];
+
+    constructor(projectRepo)
     {
-        this.pageTitle = `Side-Bar`;
+        this.sideBarTitle = `Projects`;
+        this.sideBarIcon = `fa fa-tasks`;
+        this.repo = projectRepo;
     }
+
+    created() {
+        this.repo.getAll()
+            .then((projects) => {
+                    this.projects = projects
+                }
+            );
+    }
+
 }

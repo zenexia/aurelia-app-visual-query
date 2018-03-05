@@ -1,7 +1,7 @@
 export class App {
-  constructor() {
-    this.message = 'V-Query!';
-  }
+    constructor() {
+        this.message = 'V-Query!';
+    }
 
     configureRouter(config, router) {
         config.title = 'Projects';
@@ -18,47 +18,84 @@ export class App {
                         moduleId: './modules/dashboard/home'
                     }
                 },
-                nav: true
+                nav: false
             },
             {
                 route: 'search',
-                title: 'Search Form',
+                title: 'Search',
                 viewPorts: {
                     sideBar: {
-                        moduleId: './modules/search/search-form'
+                        moduleId: './modules/search/side-bar'
                     },
                     mainContent: {
-                        moduleId: './modules/search/search-form'
+                        moduleId: './modules/search/search-index'
                     }
                 },
-                nav: true
+                nav: true,
+                settings: {
+                    nav: {
+                        icon: "fa fa-search",
+                        location: "top"
+                    }
+                }
             },
             {
                 route: "projects",
-                title: 'Project Section',
+                title: 'Projects',
                 name:'project-section',
                 viewPorts: {
                     sideBar: {
-                        moduleId: './modules/search/search-form'
+                        moduleId: './modules/projects/side-bar'
                     },
                     mainContent: {
                         moduleId: './modules/projects/project-section'
                     }
                 },
-                nav: true
+                nav: true,
+                settings: {
+                    nav: {
+                        icon: "fa fa-tasks",
+                        location: "top"
+                    }
+                }
             },
             {
                 route: 'segments',
-                title: 'Segment Index',
+                title: 'Segments',
                 viewPorts: {
                     sideBar: {
-                        moduleId: './modules/search/search-form'
+                        moduleId: './modules/segments/side-bar'
                     },
                     mainContent: {
                         moduleId: './modules/segments/segment-index'
                     }
                 },
-                nav: true
+                nav: true,
+                settings: {
+                    nav: {
+                        icon: "fa fa-object-group",
+                        location: "top"
+                    }
+                }
+            },
+            {
+                route: 'users',
+                title: 'Admin',
+                viewPorts: {
+                    sideBar: {
+                        moduleId: './modules/users/side-bar'
+                    },
+                    mainContent: {
+                        moduleId: './modules/users/profile'
+                    }
+                },
+                nav: true,
+                settings: {
+                    nav: {
+                        icon: "fa fa-user",
+                        location: "top"
+                    }
+                }
             },
             { route: 'users/:id/detail', name: 'userDetail', moduleId: 'users/user-detail' }
         ]);

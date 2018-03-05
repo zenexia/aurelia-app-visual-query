@@ -1,45 +1,41 @@
 <template>
-  <require from="materialize/css/materialize.css"></require>
+
   <require from="font-awesome/css/font-awesome.min.css"></require>
   <require from="./assets/css/base.css"></require>
 
-  <div class="sticky-top d-flex flex-column flex-md-row align-items-center border-bottom box-shadow">
-    <h5 class="my-0 mr-md-auto font-weight-normal">
+  <header>
+
+    <div class="logo-header">
       <a href="/">
-        <img src="./src/assets/img/logo.png" width="25px">
-        V-Query
+        <div class="logo">
+          <img src="./src/assets/img/logo.svg" width="25px">
+          V-Query
+        </div>
       </a>
-    </h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-dark" href="search">
-        <i class="fa fa-search"></i>
-        Search
-      </a>
-      <a class="p-2 text-dark" href="projects">
-        <i class="fa fa-puzzle-piece"></i>
-        Projects
-      </a>
-      <a class="p-2 text-dark" href="segments">
-        <i class="fa fa-gears"></i>
-        Segments
-      </a>
-    </nav>
-    <a class="btn btn-outline-primary" href="logout">Log Out</a>
-  </div>
+    </div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-        <router-view name="sideBar"></router-view>
-      </nav>
+    <div class="content-header">
 
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-        <router-view  name="mainContent"></router-view>
-      </main>
-
+      <div class="header-search-bar">
+        <!-- Later can be used to display search input -->
+      </div>
+      <div repeat.for="routeItem of router.navigation" class="top-nav-item ${routeItem.isActive ? 'active' : ''}">
+        <a href.bind="routeItem.href">
+          <i class="${routeItem.settings.nav.icon}"></i>
+          ${routeItem.title}
+        </a>
+      </div>
 
     </div>
-  </div>
 
+  </header>
+  <nav class="side-nav">
+    <router-view name="sideBar"></router-view>
+  </nav>
+  <main>
+    <router-view  name="mainContent"></router-view>
+  </main>
+
+  <footer>Copyright (c) recruit 2017-2018</footer>
 
 </template>

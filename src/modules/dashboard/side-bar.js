@@ -1,6 +1,7 @@
 export class SideBar {
     constructor()
     {
-        this.pageTitle = `Home`;
+        this.sideBarTitle = `Home`;
+        this.sideBarIcon = `fa fa-home`;
     }
 }
