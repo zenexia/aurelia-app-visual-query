@@ -6,6 +6,7 @@ export class ProjectRepository {
 
     constructor(http) {
         /*
+        this conf moved to main.js
         http.configure(config => {
             config.useStandardConfiguration()
                 .withBaseUrl("http://bq.vm/")

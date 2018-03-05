@@ -13,12 +13,12 @@ export class SideBar {
     isSingleTable(){
         //return this.router.currentInstruction.config.name; //name of the route
         //return this.router.currentInstruction.config.moduleId; //moduleId of the route
-        console.log(this.router.currentInstruction.config.name);
+        //console.log(this.router.currentInstruction.config.name);
         return (this.router.currentInstruction.config.name === "single-table");
     }
 
     isMultiTable(){
-        console.log(this.router.currentInstruction.config.name);
+        //console.log(this.router.currentInstruction.config.name);
 
         return (this.router.currentInstruction.config.name === "multi-table");
     }

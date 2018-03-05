@@ -1,4 +1,5 @@
 import environment from './environment';
+import {HttpClient} from "aurelia-fetch-client";
 
 export function configure(aurelia) {
   aurelia.use
@@ -13,11 +14,11 @@ export function configure(aurelia) {
     aurelia.use.plugin('aurelia-testing');
   }
 
- // configureContainer(aurelia.container);  // https://stackoverflow.com/questions/35140716/how-do-you-substitute-httpclient-in-aurelia
+  configureContainer(aurelia.container);  // https://stackoverflow.com/questions/35140716/how-do-you-substitute-httpclient-in-aurelia
 
   aurelia.start().then(() => aurelia.setRoot());
 }
-/*
+/**/
 function configureContainer(container) {
     let http = new HttpClient();
     http.configure(config => {

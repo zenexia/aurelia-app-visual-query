@@ -7,7 +7,7 @@ export class ProjectDetail {
     }
 
     activate(params, routeConfig) {
-        console.log(params);
+        //console.log(params);
         this.id = params.id;
     }
 }

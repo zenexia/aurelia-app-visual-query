@@ -9,15 +9,15 @@ export class SideBar {
         this.sideBarIcon = `fa fa-tasks`;
         this.repo = projectRepo;
     }
-/*
+/**/
     created() {
-        console.log("Starting to get data");
+        //console.log("Starting to get data");
         this.repo.getAll()
             .then((projects) => {
                     this.projects = projects
                 }
             );
     }
-    */
+  /*  */
 
 }
