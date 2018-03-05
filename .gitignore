@@ -21,7 +21,8 @@ Thumbs.db
 .vscode
 
 # Dependencies
-node_modules
+node_modules/
+bower_components/
 
 # Compiled files
 scripts
